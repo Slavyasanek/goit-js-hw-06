@@ -8,5 +8,17 @@ const ingredients = [
 ];
 
 const list = document.querySelector('#ingredients');
-const vegies = ingredients.map(ingredient => `<li class="item">${ingredient}</li>`).join("");
-list.innerHTML = vegies;
+
+// first variant
+
+//  * const vegies = ingredients.map(ingredient => `<li class="item">${ingredient}</li>`).join(""); 
+// * list.innerHTML = vegies; 
+
+// variant createElement
+
+const vegies = ingredients.forEach(ingredient => {
+  let listItem = document.createElement("li");
+  listItem.classList.add("item");
+  listItem.textContent = ingredient;
+  list.append(listItem);
+});
