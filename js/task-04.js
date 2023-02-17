@@ -1,3 +1,5 @@
+"use strict";
+
 const decrBtn = document.querySelector('[data-action="decrement"]');
 const incBtn = document.querySelector('[data-action="increment"]');
 const valueOutput = document.querySelector('#value');
