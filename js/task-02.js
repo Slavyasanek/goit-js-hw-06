@@ -1,3 +1,5 @@
+"use strict";
+
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -17,7 +19,7 @@ const list = document.querySelector('#ingredients');
 // variant createElement
 
 const vegies = ingredients.forEach(ingredient => {
-  let listItem = document.createElement("li");
+  const listItem = document.createElement("li");
   listItem.classList.add("item");
   listItem.textContent = ingredient;
   list.append(listItem);
