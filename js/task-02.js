@@ -18,9 +18,15 @@ const list = document.querySelector('#ingredients');
 
 // variant createElement
 
-const vegies = ingredients.forEach(ingredient => {
-  const listItem = document.createElement("li");
-  listItem.classList.add("item");
-  listItem.textContent = ingredient;
-  list.append(listItem);
-});
+const makeList = values => {
+  return values.map(ingredient => {
+    const listItem = document.createElement("li");
+    listItem.classList.add("item");
+    listItem.textContent = ingredient;
+    return listItem;
+  });
+}
+
+const vegies = makeList(ingredients);
+
+list.append(...vegies);
